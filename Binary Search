@@ -1,0 +1,41 @@
+#include<stdio.h>
+int main()
+{
+	int i,n,big,end,mid,key,found=0;
+	printf("Enter a number:");
+	scanf("%d",&n);
+	int arr[n];
+	printf("\nEnter %d array elements in the array:",n);
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&arr[i]);
+	}
+	printf("\n Enter a key:");
+	scanf("%d",&key);
+	big=0;
+	end=n-1;
+	while(big<=end)
+	{
+		mid=(big+end)/2;
+		if(arr[mid]==key)
+		{
+			printf("\n Key found at index:%d",mid);
+			found=1;
+			break;
+		}
+		else if(key<arr[end])
+		{
+			end=mid-1;
+			
+		}
+		else
+		{
+			big=mid+1;
+		}
+	}
+	if(found==0)
+	{
+		printf("Does not exist");
+	}
+	return 0;
+}
