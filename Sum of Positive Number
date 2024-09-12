@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+	int n,sum=0;
+	Read:
+	printf("Enter any number:");
+	scanf("%d",&n);
+	if(n==999)
+	goto out;
+	if(n>0)
+	{
+	sum=sum+n;
+	goto Read;
+}
+else
+{
+	goto Read;
+}
+	out:
+		printf("\n Sum of numbers is:%d",sum);
+		return(0);
+}
