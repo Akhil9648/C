@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+char ch;
+printf("Enter Any Character:   ");
+scanf("%c",&ch);
+if((ch>='a'&&ch<='z')  ||  (ch>='A'&&ch<='Z'))
+{
+	if((ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')  ||  (ch=='A'&& ch=='E'&& ch=='I'&& ch=='O'&& ch=='U'))
+	{
+		printf("\nIt is Vowel");
+	}
+	else
+	{
+		printf("\nIt is consonant");
+	}
+	}	
+	else if(ch>='0' && ch<='9')
+	{
+		printf("\nIt is Digit");
+	}
+	else if(ch==' ')
+	{
+		printf("\nIt is Space");
+	}
+	else
+	{
+		printf("\nIt is special Symbol");
+	}
+return(0);
+}
