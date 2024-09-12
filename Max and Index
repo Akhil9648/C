@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+	int n,i,max,ind=0;
+	int a[i];
+	printf("Enter a number:");
+	scanf("%d",&n);
+	printf("Enter a number:");
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	max=a[0];
+	for(i=0;i<n;i++)
+	{
+		if(max<a[i])
+		{
+			max=a[i];
+			ind=i;
+		}
+	}
+	printf("Max of %d at %d is",max,ind);
+	return 0;
+}
