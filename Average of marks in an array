@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+float FindAVG(int arr[],int n)
+{
+	int i;
+	float sum=0.0;
+	for(i=0;i<n;i++)
+	{
+		sum=sum+arr[i];
+	}
+	return(sum/n);
+}
+int main()
+{
+	int arr[100],n,i;
+	float ans;
+	printf("Enter n:");
+	scanf("%d",&n);
+	printf("\nEnter array Elements:\n");
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&arr[i]);
+	}
+	ans=FindAVG(arr,n);
+	printf("\nAverage marks=%f",ans);
+	return 0;
+}
