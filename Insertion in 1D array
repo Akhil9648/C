@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int n,a[500],e,pos;
+	printf("Enter a number:");
+	scanf("%d",&n);
+	printf("Enter %d elements:",n);
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&a[500]);
+	}
+	printf("\n Enter the key:");
+	scanf("%d",key);
+	printf("\n Enter the position:");
+	scanf("%d",pos);
+	if(pos>=n+1)
+	{
+		printf("\n Invalid Position...");
+		exit(0);
+	}
+	
+}
