@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+	int i,fact,n;
+	printf("Enter a number:");
+	scanf("%d",&n);
+	i=1;
+	fact=1;
+	X:
+		fact=fact*i;
+		i++;
+		if(i<=n)
+		 goto X;
+		 printf("Factorial=%d",fact);
+		 return(0);
+	}
