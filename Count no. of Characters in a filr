@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include<stdio.h>
+int main()
+{
+    FILE*fp;
+    char ch;
+    int nos=0,noc=0,non=0,nol=0;
+    fp=fopen("A.txt","r");
+    while(1)
+    {
+        ch=fgets(fp);
+        if(ch=EOF)
+        break;
+        noc++;
+        if(ch==' ')
+        nos++;
+        else if(ch=='\n')
+        nol++;
+        else if(ch=='\t')
+        non++;
+    }
+    fclose(fp);
+    printf("%d %d %d %d",nos,nol,not,noc);
+}
