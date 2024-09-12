@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+	int num,rev=0,d,n;
+	printf("Enter a Number:");
+	scanf("%d",&n);
+	num=n;
+	while(num!=0){
+		d=num%10;
+		rev=rev*10+d;
+		num=num/10;
+	}
+	if(rev==n)
+	{
+		printf("Palendrome Number");
+	}
+	else
+	{
+		printf("Not a Palendrome Number");
+	}
+	return 0;
+}
