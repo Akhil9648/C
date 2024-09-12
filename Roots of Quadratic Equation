@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	float a,b,c,D,r1,r2,real,imag;
+	printf("Enter teh coffeicient a,b,c:");
+	scanf("%f%f%f",&a,&b,&c);
+	D=b*b-a*a*c;
+	if(D>0)
+	{
+		printf("Roots are real and distinct");
+		r1=(-b+sqrt(D))/(2*a);
+		r2=(-b-sqrt(D))/(2*a);
+		printf("\nRoot1=%.2f   Root2=%.2f",r1,r2);
+		
+	}
+	else if(D==0)
+	{
+		printf("\nRoots are real and equal");
+		r1=-b/(2*a);
+		r2=-b/(2*a);
+		printf("\n Root1=%.2f   Root2=%.2f",r1,r2);
+		
+		
+	}
+	else
+	{
+		printf("\n Roots are Imaginary");
+		real=-b/(2*a);
+		imag=sqrt(-D)/(2*a);
+		printf("\nRoot1= % + %.2f i",real,imag);
+		printf("\nRoot1= % + %.2f i",real,imag);
+		
+	}
+	return(0);
+}
