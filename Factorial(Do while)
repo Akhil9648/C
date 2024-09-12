@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int fact,i,n;
+	char choice;
+	do{
+		printf("Enter the Number:");
+		scanf("%d",&n);
+		for(i=1,fact=1;i<=n;i++)
+		{
+			fact=fact*i;
+		}
+		printf("\nFactorial of %d is:%d",n,fact);
+		printf("\nTo contune press y:");
+		fflush(stdin);
+		scanf("%c",&choice);
+	}while(choice=='y');
+	printf("\nTast Over\nThanks");
+	return 0;
+}
