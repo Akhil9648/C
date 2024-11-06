@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include<stdlib.h>
+struct Node{
+    int data;
+    struct Node *next;
+};
+void count(struct Node*head)
+{
+    struct Node*ptr;
+    int n;
+    ptr=head;
+    while(ptr!=NULL)
+    {
+        ptr=ptr->next;
+        n++;
+    }
+     printf("%d",n);
+}
+int main() {
+    struct Node*head=(struct Node*)malloc(sizeof(struct Node));
+    struct Node*first=(struct Node*)malloc(sizeof(struct Node));
+    struct Node*second=(struct Node*)malloc(sizeof(struct Node));
+    struct Node*third=(struct Node*)malloc(sizeof(struct Node));
+    head->data=7;
+    head->next=second;
+    second->data=8;
+    second->next=third;
+    third->data=9;
+    third->next=NULL;
+    int n;
+    count(head);
+    return 0;
+}
