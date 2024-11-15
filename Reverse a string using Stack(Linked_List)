@@ -1,0 +1,68 @@
+// Linked List representation of stack
+#include <stdio.h>
+#include<stdlib.h>
+struct Node{
+    char ch;
+    struct node *next;
+};
+struct stack{
+    struct Node*top;
+};
+void init(struct stack* sptr)
+{
+    struct Node*top=NULL;
+}
+int push(struct stack*sptr,char c)
+{
+    struct Node*t=(struct Node*)malloc(sizeof(struct Node));
+    if(t==NULL)
+    {
+        return 0;
+    }
+    else
+    {
+        t->ch=c;
+        t->next=sptr->top;
+        sptr->top=t;
+        return 1;
+    }
+}
+char pop(struct stack *sptr)
+{
+    if(sptr->top==NULL)
+    {
+        return 0;
+    }
+    else
+    {
+        struct Node*t;
+        t=sptr->top;
+        char ch=t->ch;
+        sptr->top=t->next;
+        free(t);
+        return ch;
+    }
+}
+int main() {
+    struct stack *st;
+    init(st);
+    char c;
+    char name[10];
+    gets(name);
+    int i=0;
+    while(name[i]!=NULL)
+    {
+        push(st,name[i]);
+        i++;
+    }
+    c=pop(st);
+    i=0;
+    while(c!=NULL)
+    {
+        name[i]=c;
+        i++;
+        c=pop(st);
+    }
+    puts(name);
+    return 0;
+}
