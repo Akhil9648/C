@@ -1,0 +1,62 @@
+//Array based repesentation of stack
+#include<stdio.h>
+#include<stdlib.h>
+#define SIZE 10
+struct stack{
+    int top;
+    char st[SIZE];
+};
+void init(struct stack*sptr)
+{
+    sptr->top=-1;
+}
+int push(struct stack*sptr,char ch)
+{
+    if(sptr->top==SIZE)
+    {
+        return 0;
+    }
+    else
+    {
+        sptr->top++;
+        sptr->st[sptr->top]=ch;
+        return 1;
+    }
+}
+char pop(struct stack*sptr)
+{
+    if(sptr->top==-1)
+    {
+        return 0;
+    }
+    else
+    {
+        char ch=sptr->st[sptr->top];
+        sptr->top--;
+        return ch;
+    }
+}
+int main()
+{
+    struct stack *st;
+    init(st);
+    char c;
+    char name[SIZE];
+    gets(name);
+    int i=0;
+    while(name[i]!=NULL)
+    {
+        push(st,name[i]);
+        i++;
+    }
+    c=pop(st);
+    i=0;
+    while(c!=NULL)
+    {
+        name[i]=c;
+        i++;
+        c=pop(st);
+    }
+    puts(name);
+    return 0;
+}
